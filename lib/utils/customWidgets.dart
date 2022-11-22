@@ -10,3 +10,6 @@ Widget buildSvgIcon(String path) => SvgPicture.asset(
   path, 
   width: 48, 
   height: 48);
+
+const addIcon = Icon(Icons.add);
+const salvarText = Text("Salvar");

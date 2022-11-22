@@ -3,22 +3,22 @@ import 'package:persistences_types/components/input_form.dart';
 import 'package:persistences_types/utils/customStyles.dart';
 import 'package:persistences_types/utils/customWidgets.dart';
 
-class AddPersonWidget extends StatefulWidget {
-  const AddPersonWidget({super.key});
+class AddCarWidget extends StatefulWidget {
+  const AddCarWidget({super.key});
 
   @override
-  State<AddPersonWidget> createState() => _AddPersonWidgetState();
+  State<AddCarWidget> createState() => _AddCarWidgetState();
 }
 
-class _AddPersonWidgetState extends State<AddPersonWidget> {
+class _AddCarWidgetState extends State<AddCarWidget> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
-  final _lastNameController = TextEditingController();
+  final _modelController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Nova Pessoa")),
+        appBar: AppBar(title: Text("Novo carro")),
         body: Padding(
             padding: cardPadding,
             child: Form(
@@ -29,13 +29,13 @@ class _AddPersonWidgetState extends State<AddPersonWidget> {
                       InputForm(
                           hint: "Nome",
                           label: "Nome",
-                          validationMsg: "Insira o nome da pessoa",
+                          validationMsg: "Insira o nome do carro",
                           controller: _nameController),
                       InputForm(
-                          hint: "Sobrenome",
-                          label: "Sobrenome",
-                          validationMsg: "Insira o sobrenome da pessoa",
-                          controller: _lastNameController),
+                          hint: "Modelo",
+                          label: "Modelo",
+                          validationMsg: "Insira a Modelo do carro",
+                          controller: _modelController),
                       Padding(
                           padding: cardPadding,
                           child: ElevatedButton(

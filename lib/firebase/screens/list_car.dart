@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:persistences_types/sqflite/screens/add_person.dart';
+import 'package:persistences_types/firebase/screens/add_car.dart';
 import 'package:persistences_types/utils/customStyles.dart';
 import 'package:persistences_types/utils/customWidgets.dart';
 
-class ListPersonWidget extends StatefulWidget {
-  const ListPersonWidget({super.key});
+class ListCarWidget extends StatefulWidget {
+  const ListCarWidget({super.key});
 
   @override
-  State<ListPersonWidget> createState() => _ListPersonWidgetState();
+  State<ListCarWidget> createState() => _ListCarWidgetState();
 }
 
-class _ListPersonWidgetState extends State<ListPersonWidget> {
-  final title = const Text("Pessoas");
-  final addRoute = const AddPersonWidget();
+class _ListCarWidgetState extends State<ListCarWidget> {
+  final title = const Text("Carros");
+  final addRoute = const AddCarWidget();
 
-  List persons = [
+  List cars = [
     {}
   ];
 
@@ -32,7 +32,7 @@ class _ListPersonWidgetState extends State<ListPersonWidget> {
       body: ListView.separated(
           itemBuilder: (context, index) => _buildItem(index),
           separatorBuilder: (context, index) => divisorList(),
-          itemCount: persons.length),
+          itemCount: cars.length),
     );
   }
 
@@ -43,8 +43,8 @@ class _ListPersonWidgetState extends State<ListPersonWidget> {
           decoration: cardBoxStyle(),
           child: ListTile(
             leading: Text("1"),
-            title: Text("Pessoa 1"),
-            subtitle: Text("Sobrenome 1"),
+            title: Text("Carro 1"),
+            subtitle: Text("Modelo 1"),
             onLongPress: () {
               //delete
             },
