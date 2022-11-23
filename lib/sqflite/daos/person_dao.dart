@@ -9,7 +9,7 @@ class PersonDAO {
     Database db = await openDatabase(
       join(await getDatabasesPath(), 'person_database.db'),
       onCreate: ((db, version) {
-        return db.execute("CREATE TABLE Person(id INTEGER PRIMARY KEY, firstName TEXT, lastName TEXT");
+        return db.execute("CREATE TABLE Person(id INTEGER PRIMARY KEY, firstName TEXT, lastName TEXT)");
       }),
       version: 1);
 
