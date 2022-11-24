@@ -3,8 +3,11 @@ import 'package:persistences_types/firebase/screens/list_car.dart';
 import 'package:persistences_types/floor/screens/list_book.dart';
 import 'package:persistences_types/screens/home.dart';
 import 'package:persistences_types/sqflite/screens/list_person.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
